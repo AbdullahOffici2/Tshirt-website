@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | SOULED STORE</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logo.png" alt="Logo" height="50" class="me-2">
+  <span>SOULED STORE</span>
+</a>
+
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link active" href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Cart Section -->
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Your Cart</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered align-middle text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Black T-Shirt</td>
+          <td>₹499</td>
+          <td>
+            <input type="number" value="1" min="1" class="form-control w-50 mx-auto">
+          </td>
+          <td>₹499</td>
+          <td>
+            <button class="btn btn-danger btn-sm">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="cart-summary">
+    <h5>Total: ₹<span id="cartTotal">0</span></h5>
+
+    <a href="checkout.html" class="btn btn-dark w-100 mt-3">
+    Proceed to Checkout
+    </a>
+  </div>
+
+</div>
+
+<footer class="bg-dark text-white text-center py-4">
+  <p class="mb-2">© 2025 Souled Store | All Rights Reserved</p>
+
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank">
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <i class="bi bi-twitter-x"></i>
+    </a>
+    <a href="https://youtube.com" target="_blank">
+      <i class="bi bi-youtube"></i>
+    </a>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let tbody = document.querySelector("tbody");
+let totalAmount = 0;
+
+tbody.innerHTML = "";
+
+cart.forEach((item, index) => {
+  let itemTotal = item.price * item.qty;
+  totalAmount += itemTotal;
+
+  tbody.innerHTML += `
+    <tr>
+      <td>${item.name}</td>
+      <td>₹${item.price}</td>
+      <td>
+        <input type="number" value="${item.qty}" min="1"
+          onchange="updateQty(${index}, this.value)"
+          class="form-control w-50 mx-auto">
+      </td>
+      <td>₹${itemTotal}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">X</button>
+      </td>
+    </tr>
+  `;
+});
+
+document.querySelector("h4").innerText = `Total: ₹${totalAmount}`;
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
+}
+
+function updateQty(index, qty) {
+  cart[index].qty = parseInt(qty);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+/* ================================
+   GLOBAL RESET & BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+  padding: 14px 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* ================================
+   PAGE TITLE
+================================ */
+h2 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   CARDS (Checkout Sections)
+================================ */
+.card {
+  border: none;
+  border-radius: 65px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* ================================
+   FORM INPUTS
+================================ */
+.form-control {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+
+/* ================================
+   PAYMENT OPTIONS
+================================ */
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check-label {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* ================================
+   ORDER SUMMARY
+================================ */
+.card-body p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.card-body hr {
+  margin: 15px 0;
+}
+
+.card-body h5 {
+  font-weight: 700;
+}
+
+/* ================================
+   PLACE ORDER BUTTON
+================================ */
+.btn-dark {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ================================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 8px 0;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* ================================
+   PAGE FADE-IN
+================================ */
+.container {
+  animation: fadeSlide 0.7s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-img-top {
+  border-radius: 15%;
+}
+
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+body {
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Checkout container */
+.checkout-container {
+  margin-top: 40px;
+}
+
+/* Card style */
+.checkout-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fadeUp 0.6s ease;
+}
+
+/* Headings */
+.checkout-card h5 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Inputs */
+.form-control {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Total */
+.total {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Button animation */
+#placeOrderBtn {
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#placeOrderBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* Page animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-brand img {
+  border-radius: 6px;
+}
+
+/* ================================
+   NAVBAR TEXT & BRAND
+================================ */
+.navbar {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.navbar-brand span {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+  color: #dddddd !important;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ffc107;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar .bi-cart3 {
+  font-size: 20px;
+}
+
+#cartCount {
+  font-size: 11px;
+  padding: 4px 6px;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h4, h5 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.product-card h6 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.btn {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+footer {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   SOCIAL MEDIA ICONS
+================================ */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+  transform: translateY(-5px) scale(1.1);
+}
