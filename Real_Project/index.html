@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h2>LearnHub</h2>
+                    </div>
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" id="searchInput" placeholder="Search courses...">
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#courses" class="nav-link"><i class="fas fa-book"></i> Courses</a></li>
+                        <li><a href="#pricing" class="nav-link"><i class="fas fa-tag"></i> Pricing</a></li>
+                        <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#" class="nav-link btn-login" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow"><i class="fas fa-bolt"></i> Trusted by 120k+ learners</p>
+                    <h1 class="hero-title">Learn Anything, Anytime, Anywhere</h1>
+                    <p class="hero-subtitle">Discover thousands of courses from expert instructors and advance your career</p>
+                    <ul class="hero-list">
+                        <li><i class="fas fa-check-circle"></i> Expert-led video lessons</li>
+                        <li><i class="fas fa-check-circle"></i> Career-ready skill paths</li>
+                        <li><i class="fas fa-check-circle"></i> Certificates included</li>
+                    </ul>
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary"><i class="fas fa-rocket"></i> Explore Courses</a>
+                        <a href="#pricing" class="btn btn-secondary"><i class="fas fa-star"></i> View Pricing</a>
+                        <a href="#testimonials" class="btn btn-outline"><i class="fas fa-play-circle"></i> Watch Demo</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="hero-avatars">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Student avatar 1" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=120&q=80" alt="Student avatar 2" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=120&q=80" alt="Student avatar 3" loading="lazy">
+                            <span>+5k</span>
+                        </div>
+                        <p>Learners joined last month</p>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="Student studying online" loading="lazy">
+                        <div class="hero-badge">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <p>Top Rated Platform</p>
+                                <small>4.9/5 average rating</small>
+                            </div>
+                        </div>
+                        <div class="hero-mini-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZwuiMTcdRu75CkCJpuviO1os1B1_qXLHVA&s" alt="Instructor" loading="lazy">
+                            <div>
+                                <p>Live session with</p>
+                                <strong>Devasenai</strong>
+                                <small>Design Lead @ Figma</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="showcase" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Inside LearnHub</h2>
+                <p class="section-subtitle">Real classrooms, real mentors, real progress</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=80" alt="Collaborative learning session" loading="lazy">
+                    <div class="showcase-info">
+                        <p class="showcase-label"><i class="fas fa-users"></i> Workshops</p>
+                        <h3>Hands-on coding labs with mentors</h3>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" alt="Virtual classroom" loading="lazy">
+                    <div class="showcase-info">
+                        <p class="showcase-label"><i class="fas fa-video"></i> Live Sessions</p>
+                        <h3>Interactive classrooms with Q&A</h3>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Student working on laptop" loading="lazy">
+                    <div class="showcase-info">
+                        <p class="showcase-label"><i class="fas fa-laptop-code"></i> Projects</p>
+                        <h3>Portfolio-ready, real-world projects</h3>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Mentor helping student" loading="lazy">
+                    <div class="showcase-info">
+                        <p class="showcase-label"><i class="fas fa-user-tie"></i> Mentorship</p>
+                        <h3>One-on-one guidance from experts</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Courses</h2>
+                <p class="section-subtitle">Choose from our most popular courses</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card" data-course="web development html css javascript react">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80" alt="Web development course" loading="lazy">
+                        <div class="course-badge">Popular</div>
+                        <i class="fas fa-code course-icon"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category"><i class="fas fa-tag"></i> Web Development</span>
+                        <h3 class="course-title">Full Stack Development </h3>
+                        <p class="course-description">Master HTML, CSS, JavaScript, React, and Node.js from scratch</p>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.8 (2,450)</span>
+                            </div>
+                            <div class="course-price">₹3999</div>
+                        </div>
+                        <button class="btn btn-enroll"><i class="fas fa-shopping-cart"></i> Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="data science python ai machine learning">
+                    <div class="course-image course-image-2">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Data science course" loading="lazy">
+                        <div class="course-badge">New</div>
+                        <i class="fas fa-chart-line course-icon"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category"><i class="fas fa-tag"></i> Data Science</span>
+                        <h3 class="course-title">Python for Data Science & AI</h3>
+                        <p class="course-description">Learn Python, Pandas, NumPy, and Machine Learning algorithms</p>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.9 (1,890)</span>
+                            </div>
+                            <div class="course-price">₹4999</div>
+                        </div>
+                        <button class="btn btn-enroll"><i class="fas fa-shopping-cart"></i> Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="design ui ux user interface">
+                    <div class="course-image course-image-3">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="UI UX design course" loading="lazy">
+                        <div class="course-badge">Best Seller</div>
+                        <i class="fas fa-palette course-icon"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category"><i class="fas fa-tag"></i> Design</span>
+                        <h3 class="course-title">UI/UX Design Masterclass</h3>
+                        <p class="course-description">Create stunning user interfaces and exceptional user experiences</p>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.7 (3,120)</span>
+                            </div>
+                            <div class="course-price">₹4499</div>
+                        </div>
+                        <button class="btn btn-enroll"><i class="fas fa-shopping-cart"></i> Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="marketing digital seo social media">
+                    <div class="course-image course-image-4">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Digital marketing course" loading="lazy">
+                        <i class="fas fa-bullhorn course-icon"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category"><i class="fas fa-tag"></i> Marketing</span>
+                        <h3 class="course-title">Digital Marketing Fundamentals</h3>
+                        <p class="course-description">Master SEO, Social Media, Email Marketing, and Analytics</p>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.6 (1,650)</span>
+                            </div>
+                            <div class="course-price">₹3999</div>
+                        </div>
+                        <button class="btn btn-enroll"><i class="fas fa-shopping-cart"></i> Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="business strategy leadership">
+                    <div class="course-image course-image-5">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Business leadership course" loading="lazy">
+                        <i class="fas fa-briefcase course-icon"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category"><i class="fas fa-tag"></i> Business</span>
+                        <h3 class="course-title">Business Strategy & Leadership</h3>
+                        <p class="course-description">Develop strategic thinking and leadership skills for success</p>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.8 (980)</span>
+                            </div>
+                            <div class="course-price">₹5499</div>
+                        </div>
+                        <button class="btn btn-enroll"><i class="fas fa-shopping-cart"></i> Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card" data-course="photography video editing">
+                    <div class="course-image course-image-6">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Photography and video editing course" loading="lazy">
+                        <i class="fas fa-camera course-icon"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category"><i class="fas fa-tag"></i> Photography</span>
+                        <h3 class="course-title">Photography & Video Editing using Adobe After Effects</h3>
+                        <p class="course-description">Capture stunning photos and create professional videos</p>
+                        <div class="course-footer">
+                            <div class="course-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-text">4.5 (1,230)</span>
+                            </div>
+                            <div class="course-price">₹3499</div>
+                        </div>
+                        <button class="btn btn-enroll"><i class="fas fa-shopping-cart"></i> Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Students Say</h2>
+                <p class="section-subtitle">Real feedback from our learning community</p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="testimonial-card active">
+                            <div class="testimonial-content">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"LearnHub transformed my career! The courses are comprehensive and the instructors are amazing. I landed my dream job after completing the Web Development course."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://i.ytimg.com/vi/Cjf7kkesaKQ/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGHIgYCg8MA8=&rs=AOn4CLB83eU_iDqASt2iZr-Maq92qVgIwQ" alt="John Doe" loading="lazy">
+                                    </div>
+                                    <div class="author-info">
+                          
+                                        <h4>Watermelon Star</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"The best investment I've made in my education. The Data Science course helped me understand complex concepts easily. Highly recommended!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/05/09/Pictures/_1bb910da-3478-11e7-b30b-76e7402dac55.jpg" alt="Sarah Miller" loading="lazy">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Sivagami Devi</h4>
+                                        <p>Data Scientist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="testimonial-text">"Amazing platform! The UI/UX Design course gave me all the skills I needed to start my freelance design business. The support is outstanding!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://cdn.123telugu.com/content/wp-content/uploads/2025/09/Kattappa.webp" alt="Mike Johnson" loading="lazy">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Kattappan</h4>
+                                        <p>UI/UX Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-prev" id="carouselPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-next" id="carouselNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">Flexible pricing options for everyone</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Basic</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">₹1999</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to 50+ courses</li>
+                        <li><i class="fas fa-check"></i> HD video quality</li>
+                        <li><i class="fas fa-check"></i> Mobile app access</li>
+                        <li><i class="fas fa-check"></i> Community support</li>
+                        <li><i class="fas fa-times"></i> Certificates</li>
+                        <li><i class="fas fa-times"></i> Career support</li>
+                    </ul>
+                    <button class="btn btn-pricing">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">₹4999</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to all courses</li>
+                        <li><i class="fas fa-check"></i> HD & 4K video quality</li>
+                        <li><i class="fas fa-check"></i> Mobile & desktop access</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Certificates included</li>
+                        <li><i class="fas fa-check"></i> Career support</li>
+                    </ul>
+                    <button class="btn btn-pricing btn-pricing-featured">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">₹9999</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> Unlimited courses</li>
+                        <li><i class="fas fa-check"></i> 1-on-1 mentoring</li>
+                        <li><i class="fas fa-check"></i> Live sessions</li>
+                        <li><i class="fas fa-check"></i> Job guarantee</li>
+                        <li><i class="fas fa-check"></i> Custom learning path</li>
+                    </ul>
+                    <button class="btn btn-pricing">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose LearnHub?</h2>
+                <p class="section-subtitle">Everything you need to succeed in your learning journey</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="feature-title">Expert Instructors</h3>
+                    <p class="feature-description">Learn from industry professionals with years of experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-infinity"></i></div>
+                    <h3 class="feature-title">Lifetime Access</h3>
+                    <p class="feature-description">Access your courses forever, learn at your own pace</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3 class="feature-title">Career Support</h3>
+                    <p class="feature-description">Get help with job placement and career guidance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h3 class="feature-title">Certificates</h3>
+                    <p class="feature-description">Earn certificates to showcase your new skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">LearnHub</h3>
+                    <p class="footer-description">Your gateway to knowledge and career advancement</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>Email: info@learnhub.com</li>
+                        <li>Phone: +91 011-23456789</li>
+                        <li>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LearnHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-header">
+                <h2><i class="fas fa-sign-in-alt"></i> Login to LearnHub</h2>
+                <p>Welcome back! Please login to your account</p>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <div class="form-divider">
+                    <span>Or</span>
+                </div>
+                <button type="button" class="btn btn-google">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                <p class="signup-link">
+                    Don't have an account? <a href="#" id="signupLink">Sign up here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Promo Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="promo-popup">
+            <button class="popup-close" id="popupClose" aria-label="Close popup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-badge">
+                <i class="fas fa-gift"></i>
+                Limited Offer
+            </div>
+            <h3>Unlock 40% Off Your First Course</h3>
+            <p>Join today and access all premium content, live sessions, and certificates.</p>
+            <form class="popup-form" id="popupForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary btn-block">Claim Offer</button>
+            </form>
+            <small>No spam. Cancel anytime.</small>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3gJwYp4Z4Zk+N0oqlfE0KZ3QWLMWZj5Jv3T+4g3uM2w=" crossorigin="anonymous"></script>
+    <script>
+        (function ($) {
+            $(function () {
+                $('.btn-enroll').on('mouseenter', function () {
+                    $(this).addClass('is-hovered');
+                }).on('mouseleave', function () {
+                    $(this).removeClass('is-hovered');
+                });
+
+                $('.nav-link').on('click', function () {
+                    $('.nav-link').removeClass('active-link');
+                    $(this).addClass('active-link');
+                });
+            });
+        })(jQuery);
+    </script>
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        }
+
+        // Login Modal
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const modalClose = document.getElementById('modalClose');
+        const loginForm = document.getElementById('loginForm');
+
+        if (loginBtn && loginModal && modalClose && loginForm) {
+            loginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            modalClose.addEventListener('click', () => {
+                loginModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            loginModal.addEventListener('click', (e) => {
+                if (e.target === loginModal) {
+                    loginModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Login successful! (This is a demo)');
+                loginModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        const courses = [
+            { title: 'Complete Web Development Bootcamp', category: 'Web Development', keywords: 'web development html css javascript react' },
+            { title: 'Python for Data Science & AI', category: 'Data Science', keywords: 'data science python ai machine learning' },
+            { title: 'UI/UX Design Masterclass', category: 'Design', keywords: 'design ui ux user interface' },
+            { title: 'Digital Marketing Fundamentals', category: 'Marketing', keywords: 'marketing digital seo social media' },
+            { title: 'Business Strategy & Leadership', category: 'Business', keywords: 'business strategy leadership' },
+            { title: 'Photography & Video Editing', category: 'Photography', keywords: 'photography video editing' }
+        ];
+
+        if (searchInput && searchResults) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+
+                if (query.length === 0) {
+                    searchResults.classList.remove('active');
+                    courseCards.forEach(card => {
+                        card.style.display = 'block';
+                    });
+                    return;
+                }
+
+                const filteredCourses = courses.filter(course =>
+                    course.keywords.includes(query) ||
+                    course.title.toLowerCase().includes(query) ||
+                    course.category.toLowerCase().includes(query)
+                );
+
+                if (filteredCourses.length > 0) {
+                    searchResults.innerHTML = filteredCourses.map(course =>
+                        `<div class="search-result-item">${course.title} - ${course.category}</div>`
+                    ).join('');
+                    searchResults.classList.add('active');
+                } else {
+                    searchResults.innerHTML = '<div class="search-result-item">No courses found</div>';
+                    searchResults.classList.add('active');
+                }
+
+                courseCards.forEach((card, index) => {
+                    const course = courses[index];
+                    if (course && (
+                        course.keywords.includes(query) ||
+                        course.title.toLowerCase().includes(query) ||
+                        course.category.toLowerCase().includes(query)
+                    )) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeInUp 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                    searchResults.classList.remove('active');
+                }
+            });
+        }
+
+        // Carousel Functionality
+        const carouselTrack = document.getElementById('carouselTrack');
+        const carouselPrev = document.getElementById('carouselPrev');
+        const carouselNext = document.getElementById('carouselNext');
+        const dots = document.querySelectorAll('.dot');
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            testimonialCards.forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            if (carouselTrack) {
+                carouselTrack.style.transform = `translateX(-${index * 100}%)`;
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % testimonialCards.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + testimonialCards.length) % testimonialCards.length;
+            showSlide(currentSlide);
+        }
+
+        if (carouselNext && carouselPrev && testimonialCards.length > 0) {
+            carouselNext.addEventListener('click', nextSlide);
+            carouselPrev.addEventListener('click', prevSlide);
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+
+            let carouselInterval = setInterval(nextSlide, 5000);
+
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+                carouselContainer.addEventListener('mouseleave', () => {
+                    carouselInterval = setInterval(nextSlide, 5000);
+                });
+            }
+        }
+
+        // Enhanced Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const featureCards = document.querySelectorAll('.feature-card');
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            const sectionHeaders = document.querySelectorAll('.section-header');
+
+            [...courseCards, ...featureCards, ...pricingCards].forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            sectionHeaders.forEach(header => {
+                header.style.opacity = '0';
+                header.style.transform = 'translateY(-20px)';
+                header.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(header);
+            });
+        });
+
+        // Button Ripple Effect
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.width = ripple.style.height = `${size}px`;
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                ripple.classList.add('ripple');
+
+                this.appendChild(ripple);
+
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Enroll button interactions
+        document.querySelectorAll('.btn-enroll').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const courseCard = this.closest('.course-card');
+                const courseTitle = courseCard?.querySelector('.course-title')?.textContent || 'Course';
+                alert(`Added "${courseTitle}" to cart! (This is a demo)`);
+            });
+        });
+
+        // Pricing button interactions
+        document.querySelectorAll('.btn-pricing').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const pricingCard = this.closest('.pricing-card');
+                const planName = pricingCard?.querySelector('.pricing-name')?.textContent || 'Plan';
+                alert(`Selected "${planName}" plan! (This is a demo)`);
+            });
+        });
+
+        // Promo popup
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupClose = document.getElementById('popupClose');
+        const popupForm = document.getElementById('popupForm');
+        let popupShown = false;
+
+        function openPopup() {
+            if (popupOverlay) {
+                popupOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closePopup() {
+            if (popupOverlay) {
+                popupOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        setTimeout(() => {
+            if (!popupShown) {
+                openPopup();
+                popupShown = true;
+            }
+        }, 4000);
+
+        popupClose?.addEventListener('click', closePopup);
+        popupOverlay?.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+        popupForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thanks! Your discount code is on the way.');
+            closePopup();
+        });
+    </script>
+</body>
+</html>
+
